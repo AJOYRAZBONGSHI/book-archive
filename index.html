@@ -13,13 +13,19 @@
     <!-- bootstrap style sheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <style>
+        .card:hover {
+            transform: skew(2deg) scale(.95);
+            transition: all .3s ease;
+        }
+    </style>
 </head>
 
 <body>
     <header class="bg-info">
         <!-- header part -->
-        <h1 class="text-center text-success pt-5 fs-1">
-            Welcome to our awesome <span class="text-secondary">Book-shop</span>.
+        <h1 class="text-center text-primary pt-5 fs-1">
+            Welcome to our awesome <span class="text-danger">Book-shop</span>.
         </h1>
 
         <!-- book search area -->
