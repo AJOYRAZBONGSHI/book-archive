@@ -1,3 +1,4 @@
+// error and spinner get
 document.getElementById("error-message").style.display = "none";
 document.getElementById("spinner").style.display = "none";
 document.getElementById("error-message2").style.display = "none";
@@ -5,19 +6,19 @@ document.getElementById("error-message2").style.display = "none";
 const getResult = () => {
   const inputField = document.getElementById("input-field");
   const searchText = inputField.value;
-  // data clear
+  // search data clear
   inputField.value = "";
 
   // manage empty search request
   if (searchText === "") {
-    // please write something to display
+    // error massage
     displayError();
   } else {
     // Display Spinner
     document.getElementById("spinner").style.display = "block";
     // Hide error
     document.getElementById("error-message").style.display = "none";
-    // Clear Team Details
+    // Clear book Details
     document.getElementById("search-item").textContent = "";
     // Clear Search Result
     document.getElementById("book-container").textContent = "";
@@ -45,7 +46,7 @@ const displayData = (books) => {
   // search items
   const searchItem = document.getElementById("search-item");
   searchItem.innerHTML = `<h3 class="text-info">Search result found ${books.length}</h3>`;
-  // books show container
+  // show books container
   const bookContainer = document.getElementById("book-container");
 
   if (books.length === 0) {
