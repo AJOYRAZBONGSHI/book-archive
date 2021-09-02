@@ -18,6 +18,8 @@ const getResult = () => {
     document.getElementById("spinner").style.display = "block";
     // Hide error
     document.getElementById("error-message").style.display = "none";
+    // error display none
+    document.getElementById("error-message2").style.display = "none";
     // Clear book Details
     document.getElementById("search-item").textContent = "";
     // Clear Search Result
@@ -43,9 +45,7 @@ const displayError = () => {
 const displayData = (books) => {
   // spinner display none
   document.getElementById("spinner").style.display = "none";
-  // search items
-  const searchItem = document.getElementById("search-item");
-  searchItem.innerHTML = `<h3 class="text-info">Search result found ${books.length}</h3>`;
+
   // show books container
   const bookContainer = document.getElementById("book-container");
 
@@ -53,6 +53,9 @@ const displayData = (books) => {
     // display error massage
     document.getElementById("error-message2").style.display = "block";
   } else {
+    // search items
+    const searchItem = document.getElementById("search-item");
+    searchItem.innerHTML = `<h3 class="text-info">Search result found ${books.length}</h3>`;
     // display  all books
     books.forEach((book) => {
       const div = document.createElement("div");
